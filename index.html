@@ -4,9 +4,12 @@
         <title>監視中...</title>
     </head>
     <body>
-        <video id="video">Video stream not available.</video>
-        <canvas id="canvas"></canvas>
-        <img id="photo">
+        <h1>猫背チェッカー</h1>
+        <div class="y">
+            <video id="video">Video stream not available.</video><br>
+            <canvas id="canvas"></canvas>
+        </div>
+        <img id="photo" class="hide">
         <h1 id="text"></h1>
         <h2 id="count"></h2>
         <button onclick="getPerm();">通知を許可</button>
@@ -16,9 +19,24 @@
         <!-- PoseNetの読み込み -->
         <script src="https://unpkg.com/@tensorflow-models/posenet">
         </script>
+        <!-- JavaScript -->
         <script type="text/javascript" src="camera.js"></script>
         <script type="text/javascript" src="predict.js"></script>
         <script type="text/javascript" src="judge.js"></script>
         <script type="text/javascript" src="notify.js"></script>
+        <!--適当に整形-->
+        <style type="text/css">
+            body{
+                text-align: center;
+            }
+            .hide{
+                display: none;
+
+            }
+            .y{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
     </body>
 </html>
